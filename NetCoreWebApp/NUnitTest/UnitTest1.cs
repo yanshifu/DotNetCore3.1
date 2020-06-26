@@ -1,18 +1,17 @@
+using NetCoreWebApp.Models;
 using NUnit.Framework;
 
 namespace NUnitTest
 {
     public class Tests
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
 
         [Test]
         public void Test1()
         {
-            Assert.Pass();
+            Calculator calculator = new Calculator();
+            var result = calculator.Sum(5, 6, 7);
+            Assert.AreEqual(18, result);
         }
     }
 }
